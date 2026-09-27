@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 540" width="260" height="540">
+  <rect width="260" height="540" fill="#F8F9FA"/>
+  
+  <!-- Status Bar -->
+  <rect width="260" height="32" fill="#F8F9FA"/>
+  <text x="16" y="21" font-family="sans-serif" font-size="12" fill="#333">Sel 08:30</text>
+  <text x="195" y="21" font-family="sans-serif" font-size="10" fill="#333">📶  🔋 85%</text>
+  
+  <!-- Header -->
+  <rect x="0" y="32" width="260" height="52" fill="#16A34A"/>
+  <text x="130" y="62" font-family="sans-serif" font-size="15" fill="#FFFFFF" font-weight="600" text-anchor="middle">Ringkasan Hari Ini</text>
+  
+  <!-- Summary Cards Row -->
+  <rect x="12" y="96" width="112" height="72" rx="12" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="68" y="122" font-family="sans-serif" font-size="10" fill="#6B7280" text-anchor="middle">Total Transaksi</text>
+  <text x="68" y="146" font-family="sans-serif" font-size="20" fill="#1A1A1A" font-weight="700" text-anchor="middle">47</text>
+  
+  <rect x="136" y="96" width="112" height="72" rx="12" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="192" y="122" font-family="sans-serif" font-size="10" fill="#6B7280" text-anchor="middle">Pendapatan</text>
+  <text x="192" y="146" font-family="sans-serif" font-size="16" fill="#16A34A" font-weight="700" text-anchor="middle">Rp 1.2jt</text>
+  
+  <!-- Laba Card -->
+  <rect x="12" y="180" width="236" height="64" rx="12" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="24" y="206" font-family="sans-serif" font-size="10" fill="#6B7280">Keuntungan Bersih Hari Ini</text>
+  <text x="24" y="230" font-family="sans-serif" font-size="22" fill="#16A34A" font-weight="700">Rp 387.500</text>
+  
+  <!-- Divider -->
+  <text x="24" y="274" font-family="sans-serif" font-size="13" fill="#1A1A1A" font-weight="600">Produk Terlaris</text>
+  
+  <!-- Product List -->
+  <rect x="12" y="286" width="236" height="48" rx="10" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="24" y="308" font-family="sans-serif" font-size="12" fill="#1A1A1A" font-weight="500">Beras Pandan Wangi 5kg</text>
+  <text x="24" y="324" font-family="sans-serif" font-size="10" fill="#6B7280">23 terjual</text>
+  <text x="230" y="314" font-family="sans-serif" font-size="12" fill="#16A34A" font-weight="600" text-anchor="end">Rp 575rb</text>
+  
+  <rect x="12" y="342" width="236" height="48" rx="10" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="24" y="364" font-family="sans-serif" font-size="12" fill="#1A1A1A" font-weight="500">Minyak Goreng 2L</text>
+  <text x="24" y="380" font-family="sans-serif" font-size="10" fill="#6B7280">18 terjual</text>
+  <text x="230" y="370" font-family="sans-serif" font-size="12" fill="#16A34A" font-weight="600" text-anchor="end">Rp 432rb</text>
+  
+  <rect x="12" y="398" width="236" height="48" rx="10" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="24" y="420" font-family="sans-serif" font-size="12" fill="#1A1A1A" font-weight="500">Telur Ayam 1 Kg</text>
+  <text x="24" y="436" font-family="sans-serif" font-size="10" fill="#6B7280">31 terjual</text>
+  <text x="230" y="426" font-family="sans-serif" font-size="12" fill="#16A34A" font-weight="600" text-anchor="end">Rp 310rb</text>
+  
+  <!-- Bottom Nav -->
+  <rect x="0" y="490" width="260" height="50" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="52" y="518" font-family="sans-serif" font-size="9" fill="#16A34A" text-anchor="middle" font-weight="600">🏠 Beranda</text>
+  <text x="130" y="518" font-family="sans-serif" font-size="9" fill="#6B7280" text-anchor="middle">🛒 Kasir</text>
+  <text x="208" y="518" font-family="sans-serif" font-size="9" fill="#6B7280" text-anchor="middle">📊 Laporan</text>
+</svg>

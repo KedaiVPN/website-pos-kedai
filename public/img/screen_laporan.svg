@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 540" width="260" height="540">
+  <!-- Background -->
+  <rect width="260" height="540" fill="#F8F9FA"/>
+  
+  <!-- Status Bar -->
+  <rect width="260" height="32" fill="#F8F9FA"/>
+  <text x="16" y="21" font-family="sans-serif" font-size="12" fill="#333">Sen 23:16</text>
+  <text x="195" y="21" font-family="sans-serif" font-size="10" fill="#333">📶  🔋 21%</text>
+  
+  <!-- Header -->
+  <rect x="0" y="32" width="260" height="52" fill="#FFFFFF"/>
+  <rect x="14" y="44" width="24" height="24" rx="4" fill="none" stroke="#333" stroke-width="1.5"/>
+  <line x1="18" y1="52" x2="34" y2="52" stroke="#333" stroke-width="1.5"/>
+  <line x1="18" y1="58" x2="34" y2="58" stroke="#333" stroke-width="1.5"/>
+  <line x1="18" y1="64" x2="34" y2="64" stroke="#333" stroke-width="1.5"/>
+  <text x="130" y="62" font-family="sans-serif" font-size="15" fill="#1A1A1A" font-weight="600" text-anchor="middle">Laporan Transaksi</text>
+  <circle cx="234" cy="56" r="13" fill="#E8E8E8"/>
+  <text x="234" y="60" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">👤</text>
+  
+  <!-- Tabs -->
+  <rect x="0" y="84" width="260" height="42" fill="#FFFFFF"/>
+  <text x="55" y="110" font-family="sans-serif" font-size="12" fill="#888">Laporan Stok</text>
+  <text x="155" y="110" font-family="sans-serif" font-size="12" fill="#16A34A" font-weight="600">Riwayat Shift</text>
+  <rect x="143" y="116" width="68" height="2.5" rx="1" fill="#16A34A"/>
+  
+  <!-- Divider -->
+  <line x1="0" y1="126" x2="260" y2="126" fill="none" stroke="#E5E7EB" stroke-width="1"/>
+  
+  <!-- Card 1: Kasir Budi -->
+  <rect x="12" y="138" width="236" height="126" rx="12" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="24" y="162" font-family="sans-serif" font-size="13" fill="#1A1A1A" font-weight="600">Kasir: Budi</text>
+  <text x="24" y="180" font-family="sans-serif" font-size="11" fill="#6B7280">2026-09-19</text>
+  <rect x="165" y="148" width="74" height="22" rx="11" fill="#DCFCE7"/>
+  <text x="202" y="163" font-family="sans-serif" font-size="10" fill="#16A34A" text-anchor="middle">Selesai</text>
+  
+  <text x="24" y="204" font-family="sans-serif" font-size="11" fill="#6B7280">Periode: 2026-09-14</text>
+  <text x="24" y="222" font-family="sans-serif" font-size="11" fill="#374151">103 Transaksi</text>
+  <text x="130" y="222" font-family="sans-serif" font-size="11" fill="#374151">Pendapatan: <tspan font-weight="600">Rp 2.487.800</tspan></text>
+  <text x="24" y="240" font-family="sans-serif" font-size="11" fill="#374151">Laba: <tspan font-weight="600" fill="#16A34A">Rp 463.000</tspan></text>
+  
+  <rect x="24" y="248" width="80" height="12" rx="6" fill="#DCFCE7"/>
+  <text x="64" y="257" font-family="sans-serif" font-size="7" fill="#16A34A" text-anchor="middle">Download PDF</text>
+  <rect x="110" y="248" width="80" height="12" rx="6" fill="#FEE2E2"/>
+  <text x="150" y="257" font-family="sans-serif" font-size="7" fill="#DC2626" text-anchor="middle">Hapus Laporan</text>
+  
+  <!-- Card 2: Kasir Abiel -->
+  <rect x="12" y="276" width="236" height="110" rx="12" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="24" y="300" font-family="sans-serif" font-size="13" fill="#1A1A1A" font-weight="600">Kasir: Abiel</text>
+  <text x="24" y="318" font-family="sans-serif" font-size="11" fill="#6B7280">2026-09-18</text>
+  <rect x="165" y="286" width="74" height="22" rx="11" fill="#DCFCE7"/>
+  <text x="202" y="301" font-family="sans-serif" font-size="10" fill="#16A34A" text-anchor="middle">Selesai</text>
+  
+  <text x="24" y="342" font-family="sans-serif" font-size="11" fill="#374151">97 Transaksi</text>
+  <text x="130" y="342" font-family="sans-serif" font-size="11" fill="#374151">Pendapatan: <tspan font-weight="600">Rp 2.280.000</tspan></text>
+  <text x="24" y="360" font-family="sans-serif" font-size="11" fill="#374151">Laba: <tspan font-weight="600" fill="#16A34A">Rp 654.800</tspan></text>
+  
+  <!-- Card 3: Kasir Shinta -->
+  <rect x="12" y="398" width="236" height="110" rx="12" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="24" y="422" font-family="sans-serif" font-size="13" fill="#1A1A1A" font-weight="600">Kasir: Shinta</text>
+  <text x="24" y="440" font-family="sans-serif" font-size="11" fill="#6B7280">2026-08-17</text>
+  <rect x="165" y="408" width="74" height="22" rx="11" fill="#DCFCE7"/>
+  <text x="202" y="423" font-family="sans-serif" font-size="10" fill="#16A34A" text-anchor="middle">Selesai</text>
+  
+  <text x="24" y="464" font-family="sans-serif" font-size="11" fill="#374151">134 Transaksi</text>
+  <text x="130" y="464" font-family="sans-serif" font-size="11" fill="#374151">Pendapatan: <tspan font-weight="600">Rp 3.396.500</tspan></text>
+  <text x="24" y="482" font-family="sans-serif" font-size="11" fill="#374151">Laba: <tspan font-weight="600" fill="#16A34A">Rp 1.100.000</tspan></text>
+</svg>

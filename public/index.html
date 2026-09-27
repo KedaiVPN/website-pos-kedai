@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>POS Kedai - Aplikasi Kasir Digital Modern</title>
+  <meta name="description" content="Aplikasi kasir pintar untuk toko sembako, warung kelontong, dan UMKM. Catat transaksi cepat, kontrol stok otomatis, dan pantau laba harian.">
+  <link rel="icon" href="img/favicons/favicon.ico" type="image/x-icon">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Floating Nav Header -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="#" class="brand">
+        <div class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+        </div>
+        <span class="brand-name">POS Kedai</span>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="#fitur" class="nav-link">Fitur</a>
+        <a href="#keunggulan" class="nav-link">Keunggulan</a>
+        <a href="#testimoni" class="nav-link">Testimoni</a>
+        <a href="#faq" class="nav-link">Bantuan</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-container">
+      <h1 class="hero-title">
+        <span class="rotating-words">
+          <span class="word" style="color: #ff5400;">Pantau transaksi</span>
+          <span class="word">Pantau stok</span>
+          <span class="word">Pantau laba bersih</span>
+          <span class="word">Pantau laba kotor</span>
+        </span><br>
+        Bersama POS Kedai
+      </h1>
+
+      <p class="hero-subtitle">
+        Tinggalkan kalkulator dan buku catatan kotor. POS Kedai membantu mencatat transaksi kilat, pantau stok sembako real-time, dan cek keuntungan toko dari genggaman.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#daftar" class="btn btn-download-dark google-play-badge-link">
+          <img src="img/google-play-badge.jpg" alt="Get it on Google Play" class="google-play-badge-img">
+        </a>
+      </div>
+
+      <!-- Fanned Device Mockups Row -->
+      <div class="hero-showcase">
+        <div class="mockup-fanned">
+          <!-- Screen 1: Dashboard Ringkasan -->
+          <div class="android-phone frame-side frame-left-2">
+            <div class="android-screen">
+              <img src="img/app-statistik.jpg" alt="Statistik Penjualan">
+            </div>
+          </div>
+          <div class="android-phone frame-side frame-left-1">
+            <div class="android-screen">
+              <img src="img/app-laporan-shift.jpg" alt="Laporan Transaksi Riwayat Shift">
+            </div>
+          </div>
+          <div class="android-phone frame-center">
+            <div class="android-screen">
+              <img src="img/app-dashboard.jpg" alt="Dashboard Toko Sembako">
+            </div>
+          </div>
+          <div class="android-phone frame-side frame-right-1">
+            <div class="android-screen">
+              <img src="img/app-pembayaran.jpg" alt="Daftar Pesanan Pembayaran Kasir">
+            </div>
+          </div>
+          <div class="android-phone frame-side frame-right-2">
+            <div class="android-screen">
+              <img src="img/app-notifikasi-stok.jpg" alt="Peringatan Stok Menipis">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature Showcase — Tab Switcher -->
+  <section id="fitur" class="features-section">
+    <div class="container">
+
+      <!-- Tab Buttons -->
+      <div class="feature-tabs">
+        <button class="feature-tab active" data-tab="0">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          <span>Transaksi</span>
+        </button>
+        <button class="feature-tab" data-tab="1">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
+          <span>Laporan</span>
+        </button>
+        <button class="feature-tab" data-tab="2">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+          <span>Stok</span>
+        </button>
+        <button class="feature-tab" data-tab="3">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          <span>Multi Kasir</span>
+        </button>
+      </div>
+
+      <!-- Card Container -->
+      <div class="feature-showcase-card">
+
+        <!-- Slide 0: Transaksi -->
+        <div class="feature-slide active" data-slide="0">
+          <div class="slide-mockup">
+            <div class="card-phone-wrapper android-phone">
+              <div class="android-screen">
+                <img src="img/app-pembayaran.jpg" alt="Daftar Pesanan dan Hitung Kembalian Pembayaran">
+              </div>
+            </div>
+          </div>
+          <div class="slide-content">
+            <span class="card-pill pill-blue">Transaksi & Bayar</span>
+            <h2 class="card-title">Hitung Cepat Tanpa Salah Kembalian</h2>
+            <p class="card-desc">
+              Tinggalkan kalkulator kuno. Masukkan pesanan sembako, sistem otomatis menghitung total, diskon grosir, dan kembalian pelanggan hanya dalam 3 detik.
+            </p>
+          </div>
+        </div>
+
+        <!-- Slide 1: Laporan -->
+        <div class="feature-slide" data-slide="1">
+          <div class="slide-mockup">
+            <div class="card-phone-wrapper android-phone">
+              <div class="android-screen">
+                <img src="img/app-statistik.jpg" alt="Statistik Grafik Penjualan">
+              </div>
+            </div>
+          </div>
+          <div class="slide-content">
+            <span class="card-pill pill-orange">Laporan Laba Rugi</span>
+            <h2 class="card-title">Tahu Keuntungan Bersih Tiap Sore</h2>
+            <p class="card-desc">
+              Cek omset kotor dan keuntungan bersih langsung dari HP. Lihat produk terlaris seperti beras, minyak goreng, atau telur tanpa perlu rekap buku nota.
+            </p>
+          </div>
+        </div>
+
+        <!-- Slide 2: Stok -->
+        <div class="feature-slide" data-slide="2">
+          <div class="slide-mockup">
+            <div class="card-phone-wrapper android-phone">
+              <div class="android-screen">
+                <img src="img/app-notifikasi-stok.jpg" alt="Peringatan Stok Menipis POS Kedai">
+              </div>
+            </div>
+          </div>
+          <div class="slide-content">
+            <span class="card-pill pill-green">Peringatan Stok</span>
+            <h2 class="card-title">Stok Menipis Langsung Diingatkan</h2>
+            <p class="card-desc">
+              Dapatkan notifikasi otomatis saat rokok atau gula pasir mendekati batas minimum. Belanja kulakan selalu tepat waktu tanpa bikin pelanggan kecewa.
+            </p>
+          </div>
+        </div>
+
+        <!-- Slide 3: Multi Kasir -->
+        <div class="feature-slide" data-slide="3">
+          <div class="slide-mockup">
+            <div class="card-phone-wrapper android-phone">
+              <div class="android-screen">
+                <img src="img/app-laporan-shift.jpg" alt="Laporan Transaksi Riwayat Shift">
+              </div>
+            </div>
+          </div>
+          <div class="slide-content">
+            <span class="card-pill pill-iris">Multi Kasir</span>
+            <h2 class="card-title">Pantau Shift & Rekap Kas Tiap Kasir</h2>
+            <p class="card-desc">
+              Punya kasir jaga bergantian? Cetak laporan shift harian otomatis dan unduh dalam bentuk PDF resmi untuk audit yang transparan dan bebas selisih.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 3-Pillar Value Props (Clean, Airy Icons) -->
+  <section id="keunggulan" class="pillars-section">
+    <div class="container">
+      <div class="pillars-grid">
+        
+        <div class="pillar-item">
+          <div class="pillar-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3 class="pillar-title">100% Data Aman di Cloud</h3>
+          <p class="pillar-desc">HP hilang atau rusak? Jangan panik. Seluruh data penjualan dan kontak pelanggan aman tersimpan di cloud terenkripsi.</p>
+        </div>
+
+        <div class="pillar-item">
+          <div class="pillar-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+          </div>
+          <h3 class="pillar-title">Bisa Mode Offline</h3>
+          <p class="pillar-desc">Sinyal internet sedang lemot di warung? Transaksi tetap berjalan normal dan akan tersinkronisasi otomatis saat online.</p>
+        </div>
+
+        <div class="pillar-item">
+          <div class="pillar-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+          </div>
+          <h3 class="pillar-title">Sangat Ringan di Android</h3>
+          <p class="pillar-desc">Dibuat khusus untuk HP Android spesifikasi standar. Tidak lemot, hemat baterai, dan ukuran aplikasi sangat kecil.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimoni" class="testimonials-section">
+    <div class="container">
+      <div class="section-heading text-center">
+        <span class="badge-pill">Kisah Nyata Mitra</span>
+        <h2 class="section-title">Dipercaya Pemilik Toko & Warung</h2>
+        <p class="section-sub">Mereka yang sudah meninggalkan rekap manual dan omsetnya bertumbuh rapi.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">
+            "Dulu kalau tutup toko jam 9 malam, baru bisa pulang jam 11 karena ngitungin nota. Sekarang pakai POS Kedai jam 9 malam langsung klik tutup shift, semua beres!"
+          </p>
+          <div class="testi-author">
+            <div class="author-avatar">BS</div>
+            <div>
+              <h4 class="author-name">Budi Santoso</h4>
+              <p class="author-shop">Toko Sembako Berkah, Bekasi</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">
+            "Fitur pengingat stoknya juara! Ga ada lagi cerita pembeli mau beli beras pandan wangi tapi stoknya ternyata kosong di gudang."
+          </p>
+          <div class="testi-author">
+            <div class="author-avatar">SR</div>
+            <div>
+              <h4 class="author-name">Hj. Siti Rahayu</h4>
+              <p class="author-shop">Agen Telur & Minyak, Surabaya</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">
+            "Karyawan baru lulus SMA langsung bisa pakai tanpa harus ditraining berhari-hari. Aplikasinya simpel banget dan ga bikin pusing."
+          </p>
+          <div class="testi-author">
+            <div class="author-avatar">AH</div>
+            <div>
+              <h4 class="author-name">Ahmad Hidayat</h4>
+              <p class="author-shop">Kedai Kopi & Sembako, Bandung</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Full-Bleed Orange Footer ala Foodnoms -->
+  <footer class="foodnoms-footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-text-stacked">
+            <span class="brand-pos">POS</span>
+            <span class="brand-kedai">KEDAI</span>
+          </div>
+          <p class="footer-tagline">Kasir digital ringkas untuk toko sembako masa kini.</p>
+        </div>
+
+        <div class="footer-nav-grid">
+          <div class="footer-col">
+            <h4 class="col-title">Produk</h4>
+            <a href="#fitur" class="footer-link">Aplikasi Kasir</a>
+            <a href="#fitur" class="footer-link">Manajemen Stok</a>
+            <a href="#fitur" class="footer-link">Laporan PDF</a>
+            <a href="#fitur" class="footer-link">Multi Kasir</a>
+          </div>
+          <div class="footer-col">
+            <h4 class="col-title">Dukungan</h4>
+            <a href="#daftar" class="footer-link">Panduan Setup ↗</a>
+            <a href="#daftar" class="footer-link">WhatsApp Support ↗</a>
+            <a href="#faq" class="footer-link">Tanya Jawab (FAQ)</a>
+          </div>
+          <div class="footer-col">
+            <h4 class="col-title">Tentang</h4>
+            <a href="#" class="footer-link">Tentang Kami</a>
+            <a href="#" class="footer-link">Syarat & Ketentuan</a>
+            <a href="#" class="footer-link">Kebijakan Privasi</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">© 2026 POS Kedai. Hak cipta dilindungi undang-undang.</p>
+        <div class="social-links">
+          <a href="#" class="social-item">Instagram</a>
+          <a href="#" class="social-item">Facebook</a>
+          <a href="#" class="social-item">YouTube</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

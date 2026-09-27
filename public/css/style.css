@@ -222,15 +222,10 @@ a:hover { opacity: 0.7; }
   color: var(--text-primary);
 }
 
-.brand-icon {
-  width: 36px;
-  height: 36px;
-  background: var(--orange);
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
+.brand-logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
 }
 
 .brand-name {
@@ -547,208 +542,116 @@ a:hover { opacity: 0.7; }
   color: var(--text-secondary);
 }
 
-/* --- Features Section — Tab Switcher --- */
+/* --- Generic Scroll Reveal (refero-design pattern) --- */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(20px);
+  will-change: opacity, transform;
+  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-reveal].revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* --- Features Section (2x2 Grid) --- */
 .features-section {
   padding: 80px 0;
   background: var(--bg-canvas);
 }
 
-/* Tab Bar */
-.feature-tabs {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-bottom: 36px;
-  flex-wrap: wrap;
+.feature-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
 }
 
-.feature-tab {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  padding: 10px 20px;
-  border: 1px solid rgba(41, 84, 75, 0.2);
-  border-radius: var(--radius-pill);
-  background: rgba(41, 84, 75, 0.04);
-  color: var(--text-secondary);
-  font-family: var(--font-sans);
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.25s ease;
-  white-space: nowrap;
-}
-
-.feature-tab:hover {
-  border-color: rgba(41, 84, 75, 0.4);
-  color: var(--text-primary);
-  background: rgba(41, 84, 75, 0.08);
-}
-
-.feature-tab.active {
-  background: rgba(41, 84, 75, 0.18);
-  border-color: rgba(41, 84, 75, 0.5);
-  color: var(--orange);
-  box-shadow: 0 0 20px rgba(41, 84, 75, 0.1);
-}
-
-.feature-tab svg {
-  flex-shrink: 0;
-}
-
-/* Showcase Card Container — Dark glass card */
-.feature-showcase-card {
-  position: relative;
-  max-width: 820px;
-  margin: 0 auto;
-  min-height: 380px;
-  background: linear-gradient(135deg, rgba(10, 10, 10, 0.5) 0%, rgba(20, 20, 20, 0.4) 100%);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 20px;
-  box-shadow:
-    0 0 0 1px rgba(255, 255, 255, 0.3),
-    0 20px 60px -12px rgba(0, 0, 0, 0.08),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  overflow: hidden;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-}
-
-/* Each Slide */
-.feature-slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 36px;
-  padding: 44px;
-  box-sizing: border-box;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.45s ease;
-}
-
-.feature-slide.active {
-  position: relative;
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* Slide inner: crossfade with subtle lift */
-.feature-slide .slide-content,
-.feature-slide .slide-mockup {
-  opacity: 0;
-  transform: translateY(12px);
-  transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1), transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.feature-slide.active .slide-mockup {
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: 0.05s;
-}
-
-.feature-slide.active .slide-content {
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: 0.15s;
-}
-
-/* Mockup side */
-.slide-mockup {
-  flex: 0 0 190px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Content side */
-.slide-content {
-  flex: 1;
-  min-width: 0;
+/* --- Scroll Reveal Animations --- */
+.feature-card {
+  background: var(--bg-fog);
+  border-radius: var(--radius-card);
+  padding: 40px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 24px;
+  min-height: 360px;
+
+  /* Initial state for reveal animation */
+  opacity: 0;
+  transform: translateY(24px);
+  will-change: opacity, transform;
+  /* Actual transition is applied via JS/active class */
 }
 
-.slide-content .card-title {
-  font-size: 26px;
-  font-weight: 800;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  color: var(--text-primary);
-  margin: 0;
+/* Base hover effect remains */
+.feature-card.revealed {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.slide-content .card-desc {
-  font-size: 15px;
-  line-height: 1.7;
-  color: var(--text-secondary);
-  margin: 0;
+.feature-card.revealed:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Mobile adjustments */
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .feature-card {
+    opacity: 1;
+    transform: none;
+    transition: none !important;
+  }
+  .feature-card.revealed {
+    transition: none !important;
+  }
+}
+
+.card-content {
+  flex: 1;
+}
+
+.card-mockup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+/* Mobile: stack cards vertically */
 @media (max-width: 900px) {
   .features-section {
-    padding: 56px 0;
+    padding: 48px 0;
   }
 
-  .feature-tabs {
-    gap: 6px;
-    margin-bottom: 24px;
-    padding: 0 8px;
+  .feature-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
 
-  .feature-tab {
-    padding: 8px 14px;
-    font-size: 12px;
-    gap: 5px;
-  }
-
-  .feature-tab svg {
-    width: 14px;
-    height: 14px;
-  }
-
-  .feature-showcase-card {
+  .feature-card {
+    padding: 28px 22px;
     min-height: 0;
-    border-radius: 16px;
+    gap: 18px;
   }
 
-  .feature-slide {
-    flex-direction: column;
-    padding: 28px 24px;
-    gap: 20px;
-    text-align: center;
+  .card-mockup {
+    min-height: 160px;
   }
 
-  .slide-mockup {
-    flex: none;
-    order: -1;
-  }
-
-  .slide-mockup .card-phone-wrapper.android-phone {
+  .card-phone-wrapper.android-phone {
     width: 140px;
     height: 280px;
-    border-radius: 22px;
-    padding: 4px;
-  }
-
-  .slide-content {
-    align-items: center;
-  }
-
-  .slide-content .card-title {
-    font-size: 20px;
-  }
-
-  .slide-content .card-desc {
-    font-size: 13px;
-    line-height: 1.55;
   }
 }
 
@@ -893,6 +796,66 @@ a:hover { opacity: 0.7; }
 .testimonials-section {
   padding: 80px 0;
   background: var(--bg-fog);
+  overflow: hidden;
+}
+
+.testimonials-marquee {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+
+.testimonials-marquee:last-child {
+  margin-bottom: 0;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-ltr 40s linear infinite;
+  will-change: transform;
+}
+
+.marquee-track[data-direction="rtl"] {
+  animation: marquee-rtl 40s linear infinite;
+}
+
+/* LTR: Kiri ke Kanan (Berjalan ke arah Kanan) */
+@keyframes marquee-ltr {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* RTL: Kanan ke Kiri (Berjalan ke arah Kiri) */
+@keyframes marquee-rtl {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.testimonials-marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* Marquee cards must stay visible — override the generic reveal */
+.testimonials-marquee .testi-card[data-reveal] {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track,
+  .marquee-track[data-direction="rtl"] {
+    animation: none;
+  }
 }
 
 .section-heading {
@@ -930,16 +893,20 @@ a:hover { opacity: 0.7; }
   grid-template-columns: 1fr 1fr 1fr;
   gap: 24px;
 }
-
+/* Testimonial cards for marquee layout */
 .testi-card {
   background: #fff;
   border-radius: var(--radius-card);
-  padding: 32px;
+  padding: 28px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--border-subtle);
+  flex: 0 0 360px;
+  max-width: 360px;
+  min-height: 200px;
+  margin-right: 24px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  box-shadow: var(--shadow-soft);
-  transition: transform 0.2s;
+  justify-content: space-between;
 }
 
 .testi-card:hover {
@@ -950,13 +917,14 @@ a:hover { opacity: 0.7; }
   font-size: 16px;
   color: #ffcc00;
   letter-spacing: 2px;
+  margin-bottom: 12px;
 }
 
 .testi-text {
   font-size: 15px;
   line-height: 1.7;
   color: var(--text-primary);
-  flex: 1;
+  margin-bottom: 16px;
 }
 
 .testi-author {

@@ -115,23 +115,46 @@ document.addEventListener('DOMContentLoaded', () => {
     updatePhoneTransforms(); // run once on load
   }
 
-  // 5. Feature Tabs — Click to switch slide with crossfade
-  const featureTabs = document.querySelectorAll('.feature-tab');
-  const featureSlides = document.querySelectorAll('.feature-slide');
-  if (featureTabs.length > 0 && featureSlides.length > 0) {
-    featureTabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        const idx = tab.dataset.tab;
-
-        // Update active tab
-        featureTabs.forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
-
-        // Update active slide (crossfade via CSS transitions)
-        featureSlides.forEach(s => s.classList.remove('active'));
-        const target = document.querySelector(`.feature-slide[data-slide="${idx}"]`);
-        if (target) target.classList.add('active');
+  // 5. Scroll-Triggered Card Reveal on Feature Cards
+  const featureCards = document.querySelectorAll('.feature-card');
+  if (featureCards.length > 0) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          // Stagger: each card reveals with 100ms delay
+          setTimeout(() => {
+            entry.target.classList.add('revealed');
+          }, index * 100);
+          
+          // Stop observing once revealed (no need to re-trigger)
+          observer.unobserve(entry.target);
+        }
       });
+    }, {
+      threshold: 0.15,  // Trigger when 15% of card is visible
+      rootMargin: '0px 0px -50px 0px'  // Trigger slightly before full visibility
     });
+    
+    featureCards.forEach(card => observer.observe(card));
+  }
+
+  // 6. Generic Scroll Reveal for ALL sections (refero-design pattern)
+  const revealElements = document.querySelectorAll('[data-reveal]');
+  if (revealElements.length > 0) {
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const delay = parseInt(entry.target.dataset.revealDelay || '0', 10);
+          setTimeout(() => {
+            entry.target.classList.add('revealed');
+          }, delay);
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.12,
+      rootMargin: '0px 0px -40px 0px'
+    });
+    revealElements.forEach(el => revealObserver.observe(el));
   }
 });

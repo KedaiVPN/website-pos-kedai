@@ -34,7 +34,7 @@ export default function Home() {
 
       <div className="hero-actions">
         <a href="#daftar" className="btn btn-download-dark google-play-badge-link">
-          <img src="img/google-play-badge.jpg" alt="Get it on Google Play" className="google-play-badge-img" />
+          <img src="/img/google-play-badge.jpg" alt="Get it on Google Play" className="google-play-badge-img" />
         </a>
       </div>
 
@@ -44,27 +44,27 @@ export default function Home() {
           {/*  Screen 1: Dashboard Ringkasan  */}
           <div className="android-phone frame-side frame-left-2">
             <div className="android-screen">
-              <img src="img/app-statistik.jpg" alt="Statistik Penjualan" />
+              <img src="/img/app-statistik.jpg" alt="Statistik Penjualan" />
             </div>
           </div>
           <div className="android-phone frame-side frame-left-1">
             <div className="android-screen">
-              <img src="img/app-laporan-shift.jpg" alt="Laporan Transaksi Riwayat Shift" />
+              <img src="/img/app-laporan-shift.jpg" alt="Laporan Transaksi Riwayat Shift" />
             </div>
           </div>
           <div className="android-phone frame-center">
             <div className="android-screen">
-              <img src="img/app-dashboard.jpg" alt="Dashboard Toko Sembako" />
+              <img src="/img/app-dashboard.jpg" alt="Dashboard Toko Sembako" />
             </div>
           </div>
           <div className="android-phone frame-side frame-right-1">
             <div className="android-screen">
-              <img src="img/app-pembayaran.jpg" alt="Daftar Pesanan Pembayaran Kasir" />
+              <img src="/img/app-pembayaran.jpg" alt="Daftar Pesanan Pembayaran Kasir" />
             </div>
           </div>
           <div className="android-phone frame-side frame-right-2">
             <div className="android-screen">
-              <img src="img/app-notifikasi-stok.jpg" alt="Peringatan Stok Menipis" />
+              <img src="/img/app-notifikasi-stok.jpg" alt="Peringatan Stok Menipis" />
             </div>
           </div>
         </div>
@@ -90,7 +90,7 @@ export default function Home() {
           <div className="card-mockup">
             <div className="card-phone-wrapper android-phone">
               <div className="android-screen">
-                <img src="img/app-pembayaran.jpg" alt="Daftar Pesanan dan Hitung Kembalian Pembayaran" />
+                <img src="/img/app-pembayaran.jpg" alt="Daftar Pesanan dan Hitung Kembalian Pembayaran" />
               </div>
             </div>
           </div>
@@ -108,7 +108,7 @@ export default function Home() {
           <div className="card-mockup">
             <div className="card-phone-wrapper android-phone">
               <div className="android-screen">
-                <img src="img/app-statistik.jpg" alt="Statistik Grafik Penjualan" />
+                <img src="/img/app-statistik.jpg" alt="Statistik Grafik Penjualan" />
               </div>
             </div>
           </div>
@@ -126,7 +126,7 @@ export default function Home() {
           <div className="card-mockup">
             <div className="card-phone-wrapper android-phone">
               <div className="android-screen">
-                <img src="img/app-notifikasi-stok.jpg" alt="Peringatan Stok Menipis POS Kedai" />
+                <img src="/img/app-notifikasi-stok.jpg" alt="Peringatan Stok Menipis POS Kedai" />
               </div>
             </div>
           </div>
@@ -144,7 +144,7 @@ export default function Home() {
           <div className="card-mockup">
             <div className="card-phone-wrapper android-phone">
               <div className="android-screen">
-                <img src="img/app-laporan-shift.jpg" alt="Laporan Transaksi Riwayat Shift" />
+                <img src="/img/app-laporan-shift.jpg" alt="Laporan Transaksi Riwayat Shift" />
               </div>
             </div>
           </div>

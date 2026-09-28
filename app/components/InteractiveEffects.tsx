@@ -100,7 +100,7 @@ export default function InteractiveEffects() {
               }
             });
           },
-          { threshold: 0.15, rootMargin: '0px 0px -50px 0px' }
+          { threshold: 0.05, rootMargin: '0px 0px 50px 0px' }
         );
         cards.forEach((card) => observer.observe(card));
       }

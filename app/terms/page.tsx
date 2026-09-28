@@ -1,151 +1,29 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Syarat & Ketentuan - POS Kedai</title>
-  <meta name="description" content="Syarat dan Ketentuan Penggunaan Aplikasi POS Kedai">
+import type { Metadata } from 'next'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
+
+export const metadata: Metadata = {
+  title: 'Syarat & Ketentuan - POS Kedai',
+  description: 'Syarat dan ketentuan penggunaan aplikasi dan layanan POS Kedai.',
+}
+
+export default function TermsPage() {
+  return (
+    <>
+      <Header />
+      <main>
+        {/*  Floating Nav Header  */}
   
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="css/style.css">
-  <style>
-    .legal-page {
-      padding: 80px 0;
-      min-height: 100vh;
-      background: var(--bg-fog);
-    }
 
-    .legal-container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    .legal-header {
-      text-align: center;
-      margin-bottom: 60px;
-      animation: fade-in-up 0.8s cubic-bezier(0.22,1,0.36,1);
-    }
-
-    .legal-header h1 {
-      font-size: 32px;
-      font-weight: 800;
-      line-height: 1.2;
-      margin-bottom: 16px;
-      color: var(--text-primary);
-    }
-
-    .legal-header .date {
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--text-secondary);
-    }
-
-    .legal-content {
-      background: #fff;
-      border-radius: var(--radius-card);
-      padding: 48px;
-      box-shadow: var(--shadow-soft);
-      animation: fade-in-up 1s cubic-bezier(0.22,1,0.36,1) 0.2s both;
-    }
-
-    .legal-content h2 {
-      font-size: 20px;
-      font-weight: 700;
-      margin: 32px 0 16px;
-      color: var(--text-primary);
-      padding-bottom: 8px;
-      border-bottom: 1px solid var(--border-subtle);
-    }
-
-    .legal-content h3 {
-      font-size: 16px;
-      font-weight: 700;
-      margin: 24px 0 12px;
-      color: var(--text-primary);
-    }
-
-    .legal-content p {
-      color: var(--text-secondary);
-      line-height: 1.7;
-      margin-bottom: 16px;
-    }
-
-    .legal-content ul {
-      margin: 12px 0 20px 20px;
-    }
-
-    .legal-content li {
-      color: var(--text-secondary);
-      line-height: 1.7;
-      margin-bottom: 8px;
-    }
-
-    .legal-content a {
-      color: var(--orange);
-      text-decoration: none;
-    }
-
-    .legal-content a:hover {
-      text-decoration: underline;
-    }
-
-    .legal-footer {
-      margin-top: 48px;
-      padding-top: 32px;
-      border-top: 1px solid var(--border-subtle);
-    }
-
-    .legal-footer p {
-      margin-bottom: 12px;
-    }
-
-    .legal-footer .contact {
-      font-weight: 600;
-    }
-
-    @keyframes fade-in-up {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Floating Nav Header -->
-  <header class="header">
-    <div class="nav-container">
-      <a href="/" class="brand">
-        <img src="img/logo.png" alt="POS Kedai" class="brand-logo">
-        <span class="brand-name">POS Kedai</span>
-      </a>
-
-      <nav class="nav-menu">
-        <a href="/" class="nav-link">Beranda</a>
-        <a href="/terms.html" class="nav-link">Syarat & Ketentuan</a>
-        <a href="/privacy.html" class="nav-link">Kebijakan Privasi</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Terms of Service Page -->
-  <section class="legal-page">
-    <div class="legal-container">
-      <div class="legal-header">
+  {/*  Terms of Service Page  */}
+  <section className="legal-page">
+    <div className="legal-container">
+      <div className="legal-header">
         <h1>Syarat dan Ketentuan</h1>
-        <p class="date">Terakhir diperbarui: 28 September 2026</p>
+        <p className="date">Terakhir diperbarui: 28 September 2026</p>
       </div>
 
-      <div class="legal-content">
+      <div className="legal-content">
         <h2>1. PENDAHULUAN</h2>
         <p>Sebelum Anda mengunduh, memasang, atau menggunakan layanan yang tersedia pada Aplikasi POS Kedai ("Aplikasi"), mohon untuk memeriksa dan membaca dengan seksama syarat dan ketentuan penggunaan aplikasi. Dengan mengunduh, memasang, dan/atau menggunakan layanan yang tersedia pada Aplikasi POS Kedai, Anda setuju bahwa Anda telah membaca, memahami, menerima dan menyetujui Syarat dan Ketentuan penggunaan ini (Syarat dan Ketentuan), termasuk apabila terdapat perubahan dan/atau penambahan ketentuan dari waktu ke waktu.</p>
         <p>Silakan menghapus Aplikasi dari perangkat Anda jika Anda tidak setuju pada salah satu, sebagian, atau keseluruhan Syarat dan Ketentuan ini beserta dengan perubahannya.</p>
@@ -237,10 +115,10 @@
         <p>Syarat dan Ketentuan ini diatur oleh dan tunduk pada hukum Negara Republik Indonesia. Para pihak sepakat untuk menyelesaikan setiap perselisihan sehubungan dengan Syarat dan Ketentuan ini secara musyawarah mufakat terlebih dahulu.</p>
         <p>Apabila perselisihan tidak dapat diselesaikan secara musyawarah dalam waktu 30 (tiga puluh) hari kalender, maka perselisihan akan diselesaikan melalui Pengadilan Negeri yang berwenang.</p>
 
-        <div class="legal-footer">
+        <div className="legal-footer">
           <h2>16. KONTAK KAMI DAN PENGADUAN</h2>
           <p>Anda dapat menyampaikan saran, permintaan, keluhan, atau pertanyaan terkait Aplikasi kepada Kami melalui:</p>
-          <p class="contact">POS KEDAI</p>
+          <p className="contact">POS KEDAI</p>
           <p>Email: <a href="mailto:kontak@poskedai.com">kontak@poskedai.com</a></p>
           <p>Website: <a href="https://pra-register.poskedai.com" target="_blank">https://pra-register.poskedai.com</a></p>
           <p>Untuk menanggapi setiap saran, permintaan, atau keluhan Anda, Kami akan melakukan verifikasi atas informasi atau data Anda terlebih dahulu. Kami berkomitmen untuk memberikan tanggapan dalam waktu yang wajar setelah menerima laporan yang lengkap dari Anda.</p>
@@ -249,45 +127,9 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="foodnoms-footer">
-    <div class="container footer-container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <div class="brand-text-stacked">
-            <span class="brand-pos">POS</span>
-            <span class="brand-kedai">KEDAI</span>
-          </div>
-          <p class="footer-tagline">Kasir nya UMKM.</p>
-        </div>
-
-        <div class="footer-nav-grid">
-          <div class="footer-col">
-                      <h4 class="col-title">Dukungan</h4>
-                      <a href="https://wa.me/6285951763638" class="footer-link">WhatsApp Support</a>
-                      <a href="mailto:kontak@poskedai.com" class="footer-link">Email Support</a>
-                      <a href="/faq.html" class="footer-link">Tanya Jawab (FAQ)</a>
-                    </div>
-          <div class="footer-col">
-            <h4 class="col-title">Tentang</h4>
-            <a href="#" class="footer-link">Tentang Kami</a>
-            <a href="/terms.html" class="footer-link">Syarat &amp; Ketentuan</a>
-            <a href="/privacy.html" class="footer-link">Kebijakan Privasi</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p class="copyright">© 2026 POS Kedai. Hak cipta dilindungi undang-undang.</p>
-        <div class="social-links">
-          <a href="#" class="social-item">Instagram</a>
-          <a href="#" class="social-item">Facebook</a>
-          <a href="#" class="social-item">YouTube</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script src="js/main.js"></script>
-</body>
-</html>
+  {/*  Footer  */}
+      </main>
+      <Footer />
+    </>
+  )
+}

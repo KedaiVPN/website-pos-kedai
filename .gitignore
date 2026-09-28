@@ -1,6 +1,10 @@
 node_modules/
+.next/
+out/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .DS_Store
 *.bak
+.env*.local
+next-env.d.ts

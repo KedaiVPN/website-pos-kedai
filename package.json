@@ -1,16 +1,24 @@
 {
   "name": "website-pos-kedai",
   "version": "1.0.0",
-  "description": "Website Landing Page Resmi POS Kedai - Aplikasi Kasir Digital UMKM & Toko Sembako",
-  "main": "server.js",
+  "private": true,
   "scripts": {
-    "start": "node server.js",
-    "dev": "node --watch server.js"
+    "dev": "next dev -p 3001",
+    "build": "next build",
+    "start": "next start -p 3001",
+    "lint": "next lint"
   },
-  "keywords": ["pos-kedai", "kasir-digital", "pos-app", "landing-page"],
-  "author": "Pos Kedai Team",
-  "license": "ISC",
   "dependencies": {
-    "express": "^4.19.2"
+    "next": "^13.5.11",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.5",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.0",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^13.5.11",
+    "typescript": "^5.6.3"
   }
 }

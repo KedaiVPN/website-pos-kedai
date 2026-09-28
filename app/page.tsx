@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import InteractiveEffects from './components/InteractiveEffects'
+
+export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
   title: 'POS Kedai - Aplikasi Kasir Digital Modern',
@@ -10,6 +13,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
+      <InteractiveEffects />
       <Header />
       <main>
         {/*  Floating Nav Header  */}

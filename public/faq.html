@@ -13,46 +13,47 @@
   <link rel="stylesheet" href="css/style.css">
   <style>
     .faq-page {
-      padding: 80px 0;
+      padding: 120px 0 100px;
       min-height: 100vh;
       background: var(--bg-fog);
     }
 
     .faq-container {
-      max-width: 800px;
+      max-width: 780px;
       margin: 0 auto;
       padding: 0 24px;
     }
 
     .faq-header {
       text-align: center;
-      margin-bottom: 60px;
+      margin-bottom: 64px;
       animation: fade-in-up 0.8s cubic-bezier(0.22,1,0.36,1);
     }
 
     .faq-header h1 {
-      font-size: 32px;
+      font-size: clamp(28px, 5vw, 38px);
       font-weight: 800;
       line-height: 1.2;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
       color: var(--text-primary);
+      letter-spacing: -0.02em;
     }
 
     .faq-header p {
-      font-size: 16px;
+      font-size: 15px;
       color: var(--text-secondary);
     }
 
     .faq-content {
       background: #fff;
       border-radius: var(--radius-card);
-      padding: 48px;
+      padding: 56px;
       box-shadow: var(--shadow-soft);
       animation: fade-in-up 1s cubic-bezier(0.22,1,0.36,1) 0.2s both;
     }
 
     .faq-category {
-      margin-bottom: 48px;
+      margin-bottom: 56px;
     }
 
     .faq-category:last-child {
@@ -60,12 +61,14 @@
     }
 
     .faq-category-title {
-      font-size: 18px;
+      font-size: 14px;
       font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
       color: var(--orange);
-      margin-bottom: 24px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid var(--border-subtle);
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--orange);
     }
 
     .faq-item {
@@ -81,11 +84,15 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 0;
+      width: 100%;
+      padding: 22px 0;
+      background: none;
+      border: none;
       cursor: pointer;
       font-size: 16px;
       font-weight: 600;
       color: var(--text-primary);
+      text-align: left;
       transition: color 0.2s;
     }
 
@@ -95,10 +102,12 @@
 
     .faq-question::after {
       content: '+';
-      font-size: 24px;
-      font-weight: 600;
+      font-size: 26px;
+      font-weight: 300;
       color: var(--orange);
-      transition: transform 0.3s ease;
+      transition: transform 0.3s cubic-bezier(0.22,1,0.36,1);
+      flex-shrink: 0;
+      margin-left: 20px;
     }
 
     .faq-item.active .faq-question::after {
@@ -112,14 +121,15 @@
     }
 
     .faq-item.active .faq-answer {
-      max-height: 500px;
-      padding-bottom: 20px;
+      max-height: 600px;
+      padding-bottom: 24px;
     }
 
     .faq-answer p {
       color: var(--text-secondary);
-      line-height: 1.7;
-      margin-bottom: 12px;
+      line-height: 1.75;
+      margin-bottom: 14px;
+      font-size: 15px;
     }
 
     .faq-answer p:last-child {
@@ -135,30 +145,38 @@
       text-decoration: underline;
     }
 
-    .faq-answer ul {
-      margin: 12px 0 16px 20px;
+    .faq-answer ul, .faq-answer ol {
+      margin: 14px 0 18px 24px;
     }
 
     .faq-answer li {
       color: var(--text-secondary);
-      line-height: 1.7;
-      margin-bottom: 8px;
+      line-height: 1.75;
+      margin-bottom: 10px;
+      font-size: 15px;
     }
 
     .faq-contact {
-      margin-top: 48px;
-      padding-top: 32px;
+      margin-top: 56px;
+      padding-top: 36px;
       border-top: 1px solid var(--border-subtle);
       text-align: center;
     }
 
     .faq-contact p {
       color: var(--text-secondary);
-      margin-bottom: 16px;
+      margin-bottom: 18px;
+      font-size: 15px;
     }
 
     .faq-contact .btn {
       display: inline-flex;
+    }
+
+    @media (max-width: 640px) {
+      .faq-content {
+        padding: 32px 24px;
+      }
     }
 
     @keyframes fade-in-up {
@@ -201,7 +219,7 @@
 
       <div class="faq-content">
         <div class="faq-category">
-          <h2 class="faq-category-title">📱 Umum</h2>
+          <h2 class="faq-category-title">Umum</h2>
 
           <div class="faq-item">
             <button class="faq-question">Apa itu POS Kedai?</button>
@@ -233,7 +251,7 @@
         </div>
 
         <div class="faq-category">
-          <h2 class="faq-category-title">🔐 Akun & Keamanan</h2>
+          <h2 class="faq-category-title">Akun & Keamanan</h2>
 
           <div class="faq-item">
             <button class="faq-question">Bagaimana cara mendaftar akun POS Kedai?</button>
@@ -272,7 +290,7 @@
         </div>
 
         <div class="faq-category">
-          <h2 class="faq-category-title">💳 Transaksi & Fitur</h2>
+          <h2 class="faq-category-title">Transaksi & Fitur</h2>
 
           <div class="faq-item">
             <button class="faq-question">Bagaimana cara mencatat transaksi?</button>
@@ -304,7 +322,7 @@
         </div>
 
         <div class="faq-category">
-          <h2 class="faq-category-title">📊 Laporan & Data</h2>
+          <h2 class="faq-category-title">Laporan & Data</h2>
 
           <div class="faq-item">
             <button class="faq-question">Laporan apa saja yang tersedia?</button>
@@ -336,7 +354,7 @@
         </div>
 
         <div class="faq-category">
-          <h2 class="faq-category-title">💰 Paket Pro & Pembayaran</h2>
+          <h2 class="faq-category-title">Paket Pro & Pembayaran</h2>
 
           <div class="faq-item">
             <button class="faq-question">Apa bedanya paket Free dan Pro?</button>
@@ -372,7 +390,7 @@
         </div>
 
         <div class="faq-category">
-          <h2 class="faq-category-title">🛠️ Teknis & Dukungan</h2>
+          <h2 class="faq-category-title">Teknis & Dukungan</h2>
 
           <div class="faq-item">
             <button class="faq-question">Aplikasi error/tidak bisa dibuka, apa yang harus saya lakukan?</button>

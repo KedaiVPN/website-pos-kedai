@@ -1,11 +1,12 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Header() {
   return (
     <header className="header">
       <div className="nav-container">
         <Link href="/" className="brand">
-          <img src="/img/logo.png" alt="POS Kedai" className="brand-logo" />
+          <Image src="/img/logo.webp" alt="POS Kedai" width={50} height={40} className="brand-logo" priority />
           <span className="brand-name">POS Kedai</span>
         </Link>
 

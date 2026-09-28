@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import InteractiveEffects from './components/InteractiveEffects'
@@ -37,42 +38,42 @@ export default function Home() {
       </p>
 
       <div className="hero-actions">
-        <a href="#daftar" className="btn btn-download-dark google-play-badge-link">
-          <img src="/img/google-play-badge.jpg" alt="Get it on Google Play" className="google-play-badge-img" />
-        </a>
-      </div>
+                <a href="#daftar" className="btn btn-download-dark google-play-badge-link">
+                  <Image src="/img/google-play-badge.webp" alt="Get it on Google Play" width={200} height={77} className="google-play-badge-img" priority />
+                </a>
+              </div>
 
-      {/*  Fanned Device Mockups Row  */}
-      <div className="hero-showcase">
-        <div className="mockup-fanned">
-          {/*  Screen 1: Dashboard Ringkasan  */}
-          <div className="android-phone frame-side frame-left-2">
-            <div className="android-screen">
-              <img src="/img/app-statistik.jpg" alt="Statistik Penjualan" />
+            {/*  Fanned Device Mockups Row  */}
+            <div className="hero-showcase">
+              <div className="mockup-fanned">
+                {/*  Screen 1: Dashboard Ringkasan  */}
+                <div className="android-phone frame-side frame-left-2">
+                  <div className="android-screen">
+                    <Image src="/img/app-statistik.webp" alt="Statistik Penjualan" width={460} height={994} loading="lazy" decoding="async" />
+                  </div>
+                </div>
+                <div className="android-phone frame-side frame-left-1">
+                  <div className="android-screen">
+                    <Image src="/img/app-laporan-shift.webp" alt="Laporan Transaksi Riwayat Shift" width={460} height={1003} loading="lazy" decoding="async" />
+                  </div>
+                </div>
+                <div className="android-phone frame-center">
+                  <div className="android-screen">
+                    <Image src="/img/app-dashboard.webp" alt="Dashboard Toko Sembako" width={460} height={994} priority loading="eager" />
+                  </div>
+                </div>
+                <div className="android-phone frame-side frame-right-1">
+                  <div className="android-screen">
+                    <Image src="/img/app-pembayaran.webp" alt="Daftar Pesanan Pembayaran Kasir" width={460} height={1022} loading="lazy" decoding="async" />
+                  </div>
+                </div>
+                <div className="android-phone frame-side frame-right-2">
+                  <div className="android-screen">
+                    <Image src="/img/app-notifikasi-stok.webp" alt="Peringatan Stok Menipis" width={460} height={1022} loading="lazy" decoding="async" />
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="android-phone frame-side frame-left-1">
-            <div className="android-screen">
-              <img src="/img/app-laporan-shift.jpg" alt="Laporan Transaksi Riwayat Shift" />
-            </div>
-          </div>
-          <div className="android-phone frame-center">
-            <div className="android-screen">
-              <img src="/img/app-dashboard.jpg" alt="Dashboard Toko Sembako" />
-            </div>
-          </div>
-          <div className="android-phone frame-side frame-right-1">
-            <div className="android-screen">
-              <img src="/img/app-pembayaran.jpg" alt="Daftar Pesanan Pembayaran Kasir" />
-            </div>
-          </div>
-          <div className="android-phone frame-side frame-right-2">
-            <div className="android-screen">
-              <img src="/img/app-notifikasi-stok.jpg" alt="Peringatan Stok Menipis" />
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -94,7 +95,7 @@ export default function Home() {
           <div className="card-mockup">
             <div className="card-phone-wrapper android-phone">
               <div className="android-screen">
-                <img src="/img/app-pembayaran.jpg" alt="Daftar Pesanan dan Hitung Kembalian Pembayaran" />
+                <Image src="/img/app-pembayaran.webp" alt="Daftar Pesanan dan Hitung Kembalian Pembayaran" width={460} height={1022} loading="lazy" />
               </div>
             </div>
           </div>
@@ -112,7 +113,7 @@ export default function Home() {
           <div className="card-mockup">
             <div className="card-phone-wrapper android-phone">
               <div className="android-screen">
-                <img src="/img/app-statistik.jpg" alt="Statistik Grafik Penjualan" />
+                <Image src="/img/app-statistik.webp" alt="Statistik Grafik Penjualan" width={460} height={1004} loading="lazy" />
               </div>
             </div>
           </div>
@@ -130,7 +131,7 @@ export default function Home() {
           <div className="card-mockup">
             <div className="card-phone-wrapper android-phone">
               <div className="android-screen">
-                <img src="/img/app-notifikasi-stok.jpg" alt="Peringatan Stok Menipis POS Kedai" />
+                <Image src="/img/app-notifikasi-stok.webp" alt="Peringatan Stok Menipis POS Kedai" width={460} height={1022} loading="lazy" />
               </div>
             </div>
           </div>
@@ -148,7 +149,7 @@ export default function Home() {
           <div className="card-mockup">
             <div className="card-phone-wrapper android-phone">
               <div className="android-screen">
-                <img src="/img/app-laporan-shift.jpg" alt="Laporan Transaksi Riwayat Shift" />
+                <Image src="/img/app-laporan-shift.webp" alt="Laporan Shift Rekap Penjualan Harian" width={460} height={1003} loading="lazy" />
               </div>
             </div>
           </div>

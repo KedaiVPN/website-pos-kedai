@@ -23,7 +23,7 @@ export default function ClientAnimations() {
             }, parseInt(delay))
           }
         })
-      }, { threshold: 0.1 })
+      }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' })
 
       document.querySelectorAll('[data-reveal]').forEach(el => {
         observer.observe(el)

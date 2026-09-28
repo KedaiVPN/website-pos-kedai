@@ -85,7 +85,50 @@ export default function InteractiveEffects() {
       });
     }
 
-    // 4. Scroll Reveal untuk Feature Cards (stagger animation)
+    // 4. Hero Phone Alignment on Scroll (Scroll Scrub)
+    const initHeroPhoneScroll = () => {
+      const mockupContainer = document.querySelector('.mockup-fanned') as HTMLElement | null;
+      const phoneFrames = mockupContainer ? mockupContainer.querySelectorAll('.android-phone') : [];
+      if (mockupContainer && phoneFrames.length > 0) {
+        const heroSection = document.querySelector('.hero') as HTMLElement | null;
+        const heroTop = heroSection ? heroSection.offsetTop : 0;
+        const heroHeight = heroSection ? heroSection.offsetHeight : window.innerHeight;
+        const scrollRange = heroHeight * 0.7;
+
+        // Initial transforms per phone (index 0..4) matching CSS fanned layout
+        const baseTransforms = [
+          { y: 30, r: -16, s: 0.9, o: 0.85 },
+          { y: 10, r: -8, s: 1, o: 1 },
+          { y: -20, r: 0, s: 1.08, o: 1 },
+          { y: 10, r: 8, s: 1, o: 1 },
+          { y: 30, r: 16, s: 0.9, o: 0.85 }
+        ];
+
+        function updatePhoneTransforms() {
+          const scrolled = window.scrollY - heroTop;
+          const progress = Math.min(Math.max(scrolled / scrollRange, 0), 1);
+
+          phoneFrames.forEach((frame, i) => {
+            const base = baseTransforms[i];
+            const t = base.y * (1 - progress);
+            const r = base.r * (1 - progress);
+            const s = base.s + (1 - base.s) * progress;
+            const o = base.o + (1 - base.o) * progress;
+            (frame as HTMLElement).style.transform = `translateY(${t}px) rotate(${r}deg) scale(${s})`;
+            (frame as HTMLElement).style.opacity = String(o);
+          });
+
+          // Also scale the container slightly inward as it aligns
+          mockupContainer.style.transform = `scale(${1 - progress * 0.05})`;
+          mockupContainer.style.gap = `${progress * 12}px`;
+        }
+
+        window.addEventListener('scroll', updatePhoneTransforms, { passive: true });
+        updatePhoneTransforms(); // run once on load
+      }
+    };
+
+    // 5. Scroll Reveal untuk Feature Cards (stagger animation)
     const initReveal = () => {
       const cards = document.querySelectorAll('.feature-card');
       if (cards.length > 0) {
@@ -95,17 +138,17 @@ export default function InteractiveEffects() {
               if (entry.isIntersecting) {
                 setTimeout(() => {
                   entry.target.classList.add('revealed');
-                }, index * 100);
+                }, index * 150); // Stagger lebih terasa (150ms)
                 observer.unobserve(entry.target);
               }
             });
           },
-          { threshold: 0.05, rootMargin: '0px 0px 50px 0px' }
+          { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
         );
         cards.forEach((card) => observer.observe(card));
       }
 
-      // 5. Generic data-reveal observer
+      // Generic data-reveal observer
       const revealElements = document.querySelectorAll('[data-reveal]');
       if (revealElements.length > 0) {
         const revealObserver = new IntersectionObserver(
@@ -120,14 +163,15 @@ export default function InteractiveEffects() {
               }
             });
           },
-          { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+          { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
         );
         revealElements.forEach((el) => revealObserver.observe(el));
       }
     };
 
-    // Delay init slightly to ensure sibling elements are mounted in App Router
-    setTimeout(initReveal, 500);
+    // Run animations
+    initHeroPhoneScroll();
+    initReveal(); // run immediately, no need for 500ms delay
 
     // Cleanup
     return () => {
@@ -137,7 +181,6 @@ export default function InteractiveEffects() {
       if (leadForm) {
         leadForm.removeEventListener('submit', () => {});
       }
-      // observer.disconnect() not called because we only unobserve, not destroy
     };
   }, []);
 

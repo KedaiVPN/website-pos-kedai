@@ -434,6 +434,8 @@ a:hover { opacity: 0.7; }
   background: #444;
   border-radius: 1px;
   z-index: 10;
+  transition: none;
+  will-change: transform, opacity;
 }
 
 /* Inner Screen Container */
@@ -541,10 +543,17 @@ a:hover { opacity: 0.7; }
 
 /* --- Generic Scroll Reveal (refero-design pattern) --- */
 [data-reveal] {
-  opacity: 1; /* FIXED: Prevent blank white screen if JS delayed */
-  transform: translateY(20px);
+  opacity: 0;
+  transform: translateY(40px);
   will-change: opacity, transform;
-  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Fallback: jika JS tidak aktif, tampilkan semua konten tanpa animasi */
+html:not(.js-active) [data-reveal] {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
 }
 
 [data-reveal].revealed {
@@ -584,16 +593,21 @@ a:hover { opacity: 0.7; }
 
   /* Initial state for reveal animation */
   opacity: 0;
-  transform: translateY(24px);
+  transform: translateY(40px);
   will-change: opacity, transform;
-  /* Actual transition is applied via JS/active class */
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html:not(.js-active) .feature-card {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
 }
 
 /* Base hover effect remains */
 .feature-card.revealed {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .feature-card.revealed:hover {

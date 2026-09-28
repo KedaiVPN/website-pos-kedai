@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tanya Jawab (FAQ) - POS Kedai</title>
+  <meta name="description" content="Pertanyaan yang sering diajukan seputar POS Kedai">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .faq-page {
+      padding: 80px 0;
+      min-height: 100vh;
+      background: var(--bg-fog);
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .faq-header {
+      text-align: center;
+      margin-bottom: 60px;
+      animation: fade-in-up 0.8s cubic-bezier(0.22,1,0.36,1);
+    }
+
+    .faq-header h1 {
+      font-size: 32px;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      color: var(--text-primary);
+    }
+
+    .faq-header p {
+      font-size: 16px;
+      color: var(--text-secondary);
+    }
+
+    .faq-content {
+      background: #fff;
+      border-radius: var(--radius-card);
+      padding: 48px;
+      box-shadow: var(--shadow-soft);
+      animation: fade-in-up 1s cubic-bezier(0.22,1,0.36,1) 0.2s both;
+    }
+
+    .faq-category {
+      margin-bottom: 48px;
+    }
+
+    .faq-category:last-child {
+      margin-bottom: 0;
+    }
+
+    .faq-category-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--orange);
+      margin-bottom: 24px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border-subtle);
+      margin-bottom: 0;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-primary);
+      transition: color 0.2s;
+    }
+
+    .faq-question:hover {
+      color: var(--orange);
+    }
+
+    .faq-question::after {
+      content: '+';
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--orange);
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.active .faq-question::after {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s cubic-bezier(0.22,1,0.36,1), padding 0.3s ease;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 500px;
+      padding-bottom: 20px;
+    }
+
+    .faq-answer p {
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    .faq-answer p:last-child {
+      margin-bottom: 0;
+    }
+
+    .faq-answer a {
+      color: var(--orange);
+      text-decoration: none;
+    }
+
+    .faq-answer a:hover {
+      text-decoration: underline;
+    }
+
+    .faq-answer ul {
+      margin: 12px 0 16px 20px;
+    }
+
+    .faq-answer li {
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 8px;
+    }
+
+    .faq-contact {
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border-subtle);
+      text-align: center;
+    }
+
+    .faq-contact p {
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+
+    .faq-contact .btn {
+      display: inline-flex;
+    }
+
+    @keyframes fade-in-up {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Nav Header -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="/" class="brand">
+        <img src="img/logo.png" alt="POS Kedai" class="brand-logo">
+        <span class="brand-name">POS Kedai</span>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="/" class="nav-link">Beranda</a>
+        <a href="/terms.html" class="nav-link">Syarat & Ketentuan</a>
+        <a href="/privacy.html" class="nav-link">Kebijakan Privasi</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- FAQ Page -->
+  <section class="faq-page">
+    <div class="faq-container">
+      <div class="faq-header">
+        <h1>Tanya Jawab (FAQ)</h1>
+        <p>Cepat menemukan jawaban untuk pertanyaan paling sering diajukan</p>
+      </div>
+
+      <div class="faq-content">
+        <div class="faq-category">
+          <h2 class="faq-category-title">📱 Umum</h2>
+
+          <div class="faq-item">
+            <button class="faq-question">Apa itu POS Kedai?</button>
+            <div class="faq-answer">
+              <p>POS Kedai adalah aplikasi Point of Sales (kasir) berbasis mobile yang dirancang khusus untuk UMKM. Aplikasi ini membantu Anda mencatat transaksi, mengelola stok produk, membuat laporan keuangan, dan mengelola karyawan — semuanya dari smartphone Anda.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">Apakah POS Kedai gratis?</button>
+            <div class="faq-answer">
+              <p>Ya! POS Kedai menyediakan paket <strong>Free</strong> yang bisa digunakan tanpa biaya apapun. Fitur utama seperti transaksi, produk, stok, dan laporan dasar sudah tersedia. Untuk kebutuhan lebih lanjut (multi-toko, laporan lanjutan, export data, dll), tersedia paket <strong>Pro</strong> dengan harga terjangkau.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">Apakah saya butuh internet untuk menggunakan POS Kedai?</button>
+            <div class="faq-answer">
+              <p>Untuk fitur utama (transaksi, produk, stok) — <strong>tidak wajib selalu online</strong>. Data disimpan lokal di perangkat dan akan sinkron otomatis saat terhubung internet. Namun untuk verifikasi OTP, pembayaran paket Pro, dan sinkronisasi data ke cloud, koneksi internet diperlukan.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">Di sistem operasi apa POS Kedai berjalan?</button>
+            <div class="faq-answer">
+              <p>POS Kedai tersedia di <strong>Android</strong> (versi 7.0 ke atas). Anda bisa mendownloadnya melalui Google Play Store.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-category">
+          <h2 class="faq-category-title">🔐 Akun & Keamanan</h2>
+
+          <div class="faq-item">
+            <button class="faq-question">Bagaimana cara mendaftar akun POS Kedai?</button>
+            <div class="faq-answer">
+              <ol>
+                <li>Download aplikasi dari Google Play Store</li>
+                <li>Buka aplikasi, pilih "Daftar"</li>
+                <li>Isi nama lengkap, email, nomor telepon, nama toko</li>
+                <li>Buat kata sandi</li>
+                <li>Verifikasi email melalui kode OTP yang dikirim</li>
+                <li>Selesai! Anda bisa langsung menggunakan aplikasi</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">Lupa kata sandi, bagaimana?</button>
+            <div class="faq-answer">
+              <p>Di halaman login, pilih "Lupa Password". Masukkan email yang terdaftar, lalu kode OTP reset akan dikirim ke email Anda. Ikuti instruksi untuk membuat kata sandi baru.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">Apakah data toko saya aman?</button>
+            <div class="faq-answer">
+              <p>Ya. Kami menggunakan enkripsi <strong>bcrypt</strong> untuk kata sandi, komunikasi <strong>HTTPS/TLS</strong> untuk semua transmisi data, <strong>JWT Token</strong> untuk autentikasi, dan <strong>rate limiting</strong> untuk mencegah akses tidak sah. Backup data dilakukan otomatis ke cloud.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">Bisakah saya menambahkan karyawan/kasir?</button>
+            <div class="faq-answer">
+              <p>Bisa! Sebagai <strong>Owner</strong>, Anda bisa menambahkan akun Kasir/Karyawan dengan hak akses terbatas. Owner mengelola seluruh toko, sedangkan Kasir hanya bisa mengakses fitur transaksi. Semua aktivitas karyawan menjadi tanggung jawab Owner.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-category">
+          <h2 class="faq-category-title">💳 Transaksi & Fitur</h2>
+
+          <div class="faq-item">
+            <button class="faq-question">Bagaimana cara mencatat transaksi?</button>
+            <div class="faq-answer">
+              <p>Masuk ke menu "Transaksi" → "Transaksi Baru" → Pilih/tambah produk → Tentukan jumlah → Pilih metode pembayaran (Tunai/QRIS/Transfer) → Simpan. Transaksi langsung tercatat dan stok otomatis berkurang.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">Apakah stok otomatis berkurang saat transaksi?</button>
+            <div class="faq-answer">
+              <p>Ya, <strong>stok berkurang otomatis</strong> begitu transaksi disimpan. Anda juga akan mendapat notifikasi jika stok produk mendekati batas minimum (bisa diatur per produk).</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">Bisa saya cetak struk?</button>
+            <div class="faq-answer">
+              <p>Ya. POS Kedai mendukung pencetakan struk via Bluetooth ke printer thermal (58mm/80mm). Pastikan printer sudah di-pairing dengan HP Anda.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">Apakah ada fitur pembayaran QRIS?</button>
+            <div class="faq-answer">
+              <p>Ya, tersedia fitur pembayaran QRIS terintegrasi. Pembayaran via QRIS akan tercatat otomatis di sistem dan laporan keuangan.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-category">
+          <h2 class="faq-category-title">📊 Laporan & Data</h2>
+
+          <div class="faq-item">
+            <button class="faq-question">Laporan apa saja yang tersedia?</button>
+            <div class="faq-answer">
+              <ul>
+                <li><strong>Laporan Penjualan</strong> (harian/mingguan/bulanan/custom range)</li>
+                <li><strong>Laporan Laba Rugi</strong> (laba kotor & bersih per periode)</li>
+                <li><strong>Laporan Stok</strong> (produk habis, stok minimum, nilai stok)</li>
+                <li><strong>Laporan Produk Terlaris</strong></li>
+                <li><strong>Laporan Shift Kasir</strong> (untuk akun Owner memantau karyawan)</li>
+              </ul>
+              <p>Paket Pro membuka akses ekspor ke Excel/PDF dan filter lebih lanjut.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">Bisa saya ekspor data ke Excel?</button>
+            <div class="faq-answer">
+              <p>Fitur ekspor Excel/PDF tersedia di <strong>paket Pro</strong>. Paket Free hanya bisa melihat laporan di layar aplikasi.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">Bagaimana jika saya ganti HP? Data hilang?</button>
+            <div class="faq-answer">
+              <p><strong>Tidak hilang.</strong> Data Anda tersimpan di cloud (backend kami). Cukup install aplikasi di HP baru, login dengan akun yang sama — seluruh data toko, produk, transaksi, dan laporan akan sinkron otomatis.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-category">
+          <h2 class="faq-category-title">💰 Paket Pro & Pembayaran</h2>
+
+          <div class="faq-item">
+            <button class="faq-question">Apa bedanya paket Free dan Pro?</button>
+            <div class="faq-answer">
+              <ul>
+                <li><strong>Free:</strong> 1 toko, transaksi unlimited, produk unlimited, laporan dasar, 1 akun kasir</li>
+                <li><strong>Pro:</strong> Multi-toko, laporan lanjutan + ekspor Excel/PDF, kasir unlimited, notifikasi stok lanjutan, prioritas support, API access</li>
+              </ul>
+              <p>Detail perbandingan lengkap bisa dilihat di aplikasi menu "Upgrade Pro".</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">Bagaimana cara berlangganan Pro?</button>
+            <div class="faq-answer">
+              <p>Masuk ke aplikasi → Menu "Upgrade Pro" → Pilih durasi (bulanan/tahunan) → Pilih metode pembayaran via <strong>Tripay</strong> (Transfer Bank, E-Wallet, Virtual Account, dll) → Bayar → Aktifasi otomatis.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">Apakah langganan Pro otomatis perpanjang?</button>
+            <div class="faq-answer">
+              <p><strong>Tidak.</strong> Langganan Pro tidak auto-renew. Anda harus melakukan pembayaran manual kembali setelah masa berlangganan berakhir untuk melanjutkan fitur Pro.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">Bisa saya minta refund?</button>
+            <div class="faq-answer">
+              <p>Dana yang dibayarkan <strong>tidak bisa dikembalikan</strong> kecuali terbukti terjadi kesalahan sistem di pihak kami. Klaim refund maksimal 1×24 jam setelah transaksi dengan menghubungi support via email <a href="mailto:kontak@poskedai.com">kontak@poskedai.com</a>.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-category">
+          <h2 class="faq-category-title">🛠️ Teknis & Dukungan</h2>
+
+          <div class="faq-item">
+            <button class="faq-question">Aplikasi error/tidak bisa dibuka, apa yang harus saya lakukan?</button>
+            <div class="faq-answer">
+              <ol>
+                <li>Pastikan versi Android minimal 7.0</li>
+                <li>Update aplikasi ke versi terbaru via Play Store</li>
+                <li>Restart HP, lalu buka aplikasi lagi</li>
+                <li>Jika tetap error, hubungi kami via WhatsApp/email dengan screenshot error-nya</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">Bagaimana cara menghubungi support?</button>
+            <div class="faq-answer">
+              <ul>
+                <li><strong>WhatsApp Support:</strong> Klik tombol "WhatsApp Support" di aplikasi atau website</li>
+                <li><strong>Email:</strong> <a href="mailto:kontak@poskedai.com">kontak@poskedai.com</a></li>
+              </ul>
+              <p>Kami berkomitmen merespons dalam waktu wajar pada jam kerja (Senin–Jumat, 09:00–17:00 WIB).</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">Apakah ada tutorial cara pakai?</button>
+            <div class="faq-answer">
+              <p>Ya. Di aplikasi tersedia <strong>panduan interaktif</strong> untuk pemula. Kami juga menyediakan video tutorial di channel YouTube POS Kedai dan artikel bantuan di website.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-contact">
+          <p>Masih punya pertanyaan? Kami siap bantu.</p>
+          <a href="mailto:kontak@poskedai.com" class="btn btn-pill-orange">Hubungi Support →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="foodnoms-footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-text-stacked">
+            <span class="brand-pos">POS</span>
+            <span class="brand-kedai">KEDAI</span>
+          </div>
+          <p class="footer-tagline">Kasir nya UMKM.</p>
+        </div>
+
+        <div class="footer-nav-grid">
+          <div class="footer-col">
+            <h4 class="col-title">Dukungan</h4>
+            <a href="#" class="footer-link">WhatsApp Support ↗</a>
+            <a href="/faq.html" class="footer-link">Tanya Jawab (FAQ)</a>
+          </div>
+          <div class="footer-col">
+            <h4 class="col-title">Tentang</h4>
+            <a href="/about.html" class="footer-link">Tentang Kami</a>
+            <a href="/terms.html" class="footer-link">Syarat & Ketentuan</a>
+            <a href="/privacy.html" class="footer-link">Kebijakan Privasi</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">© 2026 POS Kedai. Hak cipta dilindungi undang-undang.</p>
+        <div class="social-links">
+          <a href="#" class="social-item">Instagram</a>
+          <a href="#" class="social-item">Facebook</a>
+          <a href="#" class="social-item">YouTube</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // FAQ Accordion
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isActive = item.classList.contains('active');
+
+        // Close all other items in same category
+        item.parentElement.querySelectorAll('.faq-item').forEach(other => {
+          if (other !== item) other.classList.remove('active');
+        });
+
+        // Toggle current
+        item.classList.toggle('active');
+      });
+    });
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+# POS Kedai Robots.txt
+# Allow all search engines and AI bots for optimal SEO and AI visibility
+
+User-agent: *
+Allow: /
+Disallow: /_next/
+Disallow: *.json$
+
+# Specific AI/LLM Bots - Explicitly Allow for AI Visibility
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+# Block only training/archival crawlers
+User-agent: CCBot
+Disallow: /
+
+User-agent: AdsBot-Google
+Disallow: /
+
+# Sitemap location
+Sitemap: https://poskedai.com/sitemap.xml

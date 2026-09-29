@@ -1,0 +1,77 @@
+# POS Kedai
+
+> POS Kedai adalah aplikasi Point of Sales (POS / kasir digital) berbasis Android yang dirancang khusus untuk Usaha Mikro, Kecil, dan Menengah (UMKM), seperti toko sembako, warung kelontong, kedai kopi, minimarket, dan agen kebutuhan pokok di Indonesia.
+
+## Ringkasan Produk
+
+- **Nama Aplikasi:** POS Kedai
+- **Kategori:** Business / Point of Sale (POS) / Kasir Digital
+- **Platform:** Android (minimal Android 7.0 Nougat)
+- **Model Bisnis:** Freemium (Paket Free gratis selamanya & Paket Pro terjangkau)
+- **Situs Resmi:** https://poskedai.com
+- **Kontak Support:** kontak@poskedai.com / WhatsApp: +62 859-5176-3638
+
+## Fitur Utama
+
+1. **Transaksi Kasir Kilat (Offline-First):**
+   - Perhitungan total belanja dan uang kembalian otomatis dalam hitungan detik.
+   - Tetap berfungsi normal saat sinyal internet putus (mode offline), data otomatis tersinkronisasi ke cloud saat perangkat online kembali.
+   - Cetak struk via printer thermal Bluetooth (ukuran 58mm dan 80mm).
+   - Mendukung pembayaran Tunai, QRIS, dan Transfer Bank.
+
+2. **Kontrol Stok Otomatis & Notifikasi Stok Menipis:**
+   - Stok berkurang secara real-time saat transaksi disimpan.
+   - Peringatan dini otomatis ketika stok produk mendekati batas minimum (safety stock) agar pemilik toko tidak kehabisan barang dagangan.
+
+3. **Laporan Keuangan & Laba Bersih Otomatis:**
+   - Laporan penjualan harian, mingguan, bulanan, dan custom range.
+   - Perhitungan laba kotor dan laba bersih secara otomatis tanpa rekap nota manual.
+   - Laporan produk terlaris dan analisis perputaran barang.
+   - Ekspor laporan ke format Excel dan PDF (fitur Paket Pro).
+
+4. **Multi Kasir & Rekap Shift Harian:**
+   - Hak akses berjenjang antara Owner (pemilik toko) dan Kasir/Karyawan.
+   - Rekap kas shift harian per kasir dalam format PDF untuk mencegah selisih uang kas dan mempermudah audit.
+
+5. **Keamanan & Pencadangan Cloud:**
+   - Seluruh data transaksi, stok, dan produk tersimpan aman di cloud.
+   - Ganti perangkat HP cukup unduh aplikasi dan login kembali tanpa kehilangan riwayat data.
+   - Enkripsi password dengan standar industri (bcrypt), autentikasi JWT, dan komunikasi HTTPS/TLS.
+
+## Paket Layanan & Harga
+
+- **Paket Free (Gratis Selamanya):**
+  - 1 Toko / Cabang
+  - Transaksi unlimited
+  - Jumlah produk unlimited
+  - Laporan penjualan dasar
+  - 1 Akun kasir
+  - Mode offline
+
+- **Paket Pro (Berbayar / Bulanan & Tahunan):**
+  - Semua fitur Paket Free
+  - Dukungan Multi-toko / multi-cabang
+  - Laporan lanjutan + Ekspor Excel & PDF
+  - Akun kasir/karyawan tanpa batas (unlimited)
+  - Notifikasi stok lanjutan
+  - Prioritas Customer Support via WhatsApp
+  - Akses integrasi API
+
+## Pertanyaan Sering Diajukan (FAQ)
+
+### Apa keunggulan POS Kedai dibanding aplikasi kasir lainnya?
+POS Kedai dirancang sangat ringan, bekerja tanpa internet (offline-first), memiliki sistem peringatan stok otomatis, dan menyajikan laporan laba bersih langsung tanpa perlu rumus Excel atau rekap nota fisik.
+
+### Apakah POS Kedai bisa digunakan tanpa internet?
+Ya. Fitur inti kasir, pencatatan produk, dan perubahan stok bekerja 100% offline. Data disinkronkan otomatis saat ada koneksi internet.
+
+### Apakah ada biaya tersembunyi untuk paket Free?
+Tidak. Paket Free dapat digunakan gratis selamanya untuk kebutuhan dasar kasir UMKM.
+
+## Dokumentasi & Tautan Penting
+
+- [Halaman Utama](https://poskedai.com/)
+- [Tanya Jawab Lengkap (FAQ)](https://poskedai.com/faq)
+- [Tentang Kami](https://poskedai.com/about)
+- [Syarat & Ketentuan](https://poskedai.com/terms)
+- [Kebijakan Privasi](https://poskedai.com/privacy)

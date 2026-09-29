@@ -9,10 +9,102 @@ export const metadata: Metadata = {
 }
 
 export default function FaqPage() {
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Apa itu POS Kedai?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'POS Kedai adalah aplikasi Point of Sales (kasir) berbasis mobile yang dirancang khusus untuk UMKM. Aplikasi ini membantu Anda mencatat transaksi, mengelola stok produk, membuat laporan keuangan, dan mengelola karyawan — semuanya dari smartphone Anda.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Apakah POS Kedai gratis?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Ya! POS Kedai menyediakan paket Free yang bisa digunakan tanpa biaya apapun. Fitur utama seperti transaksi, produk, stok, dan laporan dasar sudah tersedia. Untuk kebutuhan lebih lanjut (multi‑toko, laporan lanjutan, export data, dll), tersedia paket Pro dengan harga terjangkau.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Apakah saya butuh internet untuk menggunakan POS Kedai?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Tidak. Fitur inti kasir, pencatatan produk, dan perubahan stok bekerja 100% offline. Data disinkronkan otomatis saat ada koneksi internet. Hanya fitur OTP, paket Pro, dan sinkronisasi cloud yang membutuhkan internet.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Di sistem operasi apa POS Kedai berjalan?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'POS Kedai tersedia di Android (versi 7.0 ke atas). Anda dapat mengunduhnya melalui Google Play Store.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Bagaimana cara mendaftar akun POS Kedai?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Download aplikasi dari Google Play Store, pilih "Daftar", isi nama lengkap, email, nomor telepon, nama toko, buat kata sandi, verifikasi email melalui kode OTP, selesai.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Apakah data toko saya aman?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Ya. Kami menggunakan enkripsi bcrypt untuk kata sandi, komunikasi HTTPS/TLS untuk semua transmisi data, JWT Token untuk autentikasi, dan backup otomatis ke cloud.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Bagaimana cara mencatat transaksi?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Masuk ke menu "Transaksi" → "Transaksi Baru" → Pilih/tambah produk → Tentukan jumlah → Pilih metode pembayaran (Tunai/QRIS/Transfer) → Simpan. Transaksi langsung tercatat dan stok otomatis berkurang.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Apakah stok otomatis berkurang saat transaksi?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Ya, stok berkurang otomatis begitu transaksi disimpan. Anda juga akan mendapat notifikasi jika stok produk mendekati batas minimum.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Laporan apa saja yang tersedia?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Laporan penjualan (harian/mingguan/bulanan), laporan laba rugi, laporan stok, laporan produk terlaris, laporan shift kasir. Paket Pro menambah ekspor ke Excel/PDF dan filter lanjutan.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Apa bedanya paket Free dan Pro?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Free: 1 toko, transaksi unlimited, produk unlimited, laporan dasar, 1 akun kasir. Pro: multi‑toko, laporan lanjutan + ekspor Excel/PDF, kasir unlimited, notifikasi stok lanjutan, dukungan prioritas, API access.',
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <Header />
       <main>
+        {/* Schema.org FAQPage JSON-LD for AI SEO */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
         {/*  Floating Nav Header  */}
 
 

@@ -25,37 +25,42 @@ export default function Header() {
   }, [])
 
   return (
-    <header className="header">
-      <div className="nav-container">
-        <Link href="/" className="brand">
-          <Image src="/img/logo.webp" alt="POS Kedai" width={50} height={40} className="brand-logo" priority />
-          <span className="brand-name">POS Kedai</span>
-        </Link>
+    <>
+      <header className="header">
+        <div className="nav-container">
+          <Link href="/" className="brand">
+            <Image src="/img/logo.webp" alt="POS Kedai" width={50} height={40} className="brand-logo" priority />
+            <span className="brand-name">POS Kedai</span>
+          </Link>
 
-        {/* Desktop nav */}
-        <nav className="nav-menu">
-          <Link href="/#fitur" className="nav-link">Fitur</Link>
-          <Link href="/#keunggulan" className="nav-link">Keunggulan</Link>
-          <Link href="/faq" className="nav-link">FAQ</Link>
-          <Link href="/about" className="nav-link">Tentang</Link>
-        </nav>
+          {/* Desktop nav */}
+          <nav className="nav-menu">
+            <Link href="/#fitur" className="nav-link">Fitur</Link>
+            <Link href="/#keunggulan" className="nav-link">Keunggulan</Link>
+            <Link href="/faq" className="nav-link">FAQ</Link>
+            <Link href="/about" className="nav-link">Tentang</Link>
+          </nav>
 
-        {/* Hamburger button (mobile only) */}
-        <button
-          className={`hamburger-btn ${menuOpen ? 'open' : ''}`}
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Menu"
-          aria-expanded={menuOpen}
-        >
-          <div className="hamburger-icon">
-            <span className="bar bar1"></span>
-            <span className="bar bar2"></span>
-            <span className="bar bar3"></span>
-          </div>
-        </button>
-      </div>
+          {/* Hamburger button (mobile only) */}
+          <button
+            className={`hamburger-btn ${menuOpen ? 'open' : ''}`}
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Menu"
+            aria-expanded={menuOpen}
+          >
+            <div className="hamburger-icon">
+              <span className="bar bar1"></span>
+              <span className="bar bar2"></span>
+              <span className="bar bar3"></span>
+            </div>
+          </button>
+        </div>
+      </header>
 
-      {/* Mobile slide-down menu */}
+      {/* Mobile overlay menu — fixed so main content doesn't shift */}
+      {menuOpen && (
+        <div className="mobile-menu-backdrop" onClick={() => setMenuOpen(false)} />
+      )}
       <div ref={menuRef} className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
         <a
           href="https://wa.me/6285951763638"
@@ -92,6 +97,6 @@ export default function Header() {
           <span>FAQ</span>
         </Link>
       </div>
-    </header>
+    </>
   )
 }

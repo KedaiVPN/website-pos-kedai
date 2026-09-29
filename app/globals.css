@@ -251,6 +251,96 @@ a:hover { opacity: 0.7; }
   opacity: 1;
 }
 
+/* --- Hamburger Button (mobile only) --- */
+.hamburger-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  padding: 0;
+  border-radius: 10px;
+  transition: background 0.2s;
+}
+
+.hamburger-btn:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.hamburger-btn:active {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+/* --- Mobile Slide-Down Menu --- */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid var(--border-subtle);
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.25s ease, opacity 0.2s ease;
+}
+
+.mobile-menu.open {
+  max-height: 320px;
+  opacity: 1;
+}
+
+.mobile-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 24px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-subtle);
+  transition: background 0.15s;
+  -webkit-tap-highlight-color: transparent;
+  min-height: 52px;
+}
+
+.mobile-menu-item:last-child {
+  border-bottom: none;
+}
+
+.mobile-menu-item:hover {
+  background: rgba(41, 84, 75, 0.04);
+}
+
+.mobile-menu-item:active {
+  background: rgba(41, 84, 75, 0.08);
+}
+
+.mobile-menu-item svg {
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+/* --- Responsive: show hamburger, hide desktop nav --- */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .hamburger-btn {
+    display: flex;
+  }
+
+  .mobile-menu {
+    display: flex;
+  }
+}
+
 .nav-cta .btn {
   font-size: 14px;
   padding: 10px 22px;

@@ -4,7 +4,10 @@ import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'Kebijakan Privasi - POS Kedai',
-  description: 'Kebijakan privasi dan perlindungan data pengguna POS Kedai.',
+  description: 'Kebijakan privasi, perlindungan data pribadi, dan keamanan informasi pengguna aplikasi kasir POS Kedai.',
+  alternates: {
+    canonical: 'https://poskedai.com/privacy',
+  },
 }
 
 export default function PrivacyPage() {
@@ -109,7 +112,7 @@ export default function PrivacyPage() {
           <p>Guna menjunjung hak Anda sebagai pengguna Aplikasi Kami, apabila terdapat keluhan atau pertanyaan sehubungan dengan Kebijakan Privasi ini, silakan menghubungi:</p>
           <p className="contact">POS KEDAI</p>
           <p>Email: <a href="mailto:kontak@poskedai.com">kontak@poskedai.com</a></p>
-          <p>Website: <a href="https://pra-register.poskedai.com" target="_blank">https://pra-register.poskedai.com</a></p>
+          <p>Website: <a href="https://poskedai.com" target="_blank">https://poskedai.com</a></p>
         </div>
       </div>
     </div>

@@ -4,7 +4,10 @@ import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'Syarat & Ketentuan - POS Kedai',
-  description: 'Syarat dan ketentuan penggunaan aplikasi dan layanan POS Kedai.',
+  description: 'Syarat dan ketentuan penggunaan aplikasi kasir POS Kedai serta layanan pengelolaan toko UMKM.',
+  alternates: {
+    canonical: 'https://poskedai.com/terms',
+  },
 }
 
 export default function TermsPage() {
@@ -120,7 +123,7 @@ export default function TermsPage() {
           <p>Anda dapat menyampaikan saran, permintaan, keluhan, atau pertanyaan terkait Aplikasi kepada Kami melalui:</p>
           <p className="contact">POS KEDAI</p>
           <p>Email: <a href="mailto:kontak@poskedai.com">kontak@poskedai.com</a></p>
-          <p>Website: <a href="https://pra-register.poskedai.com" target="_blank">https://pra-register.poskedai.com</a></p>
+          <p>Website: <a href="https://poskedai.com" target="_blank">https://poskedai.com</a></p>
           <p>Untuk menanggapi setiap saran, permintaan, atau keluhan Anda, Kami akan melakukan verifikasi atas informasi atau data Anda terlebih dahulu. Kami berkomitmen untuk memberikan tanggapan dalam waktu yang wajar setelah menerima laporan yang lengkap dari Anda.</p>
         </div>
       </div>

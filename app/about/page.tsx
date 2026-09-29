@@ -3,8 +3,11 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'Tentang Kami - POS Kedai',
-  description: 'Tentang POS Kedai - Startup SaaS yang berfokus pada pemberdayaan Usaha Kecil Menengah (UKM).',
+  title: 'Tentang Kami - POS Kedai | Solusi Kasir Digital UMKM',
+  description: 'Mengenal POS Kedai, platform aplikasi kasir (Point of Sale) mobile Android untuk memajukan toko sembako, warung kelontong, dan UMKM di Indonesia.',
+  alternates: {
+    canonical: 'https://poskedai.com/about',
+  },
 }
 
 export default function AboutPage() {

@@ -7,11 +7,18 @@ import Image from 'next/image'
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
   const menuRef = useRef<HTMLDivElement>(null)
+  const buttonRef = useRef<HTMLButtonElement>(null)
 
-  // Close on outside click
+  // Close on outside click (but NOT when clicking the hamburger button)
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
-      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
+      const target = e.target as Node
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(target) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(target)
+      ) {
         setMenuOpen(false)
       }
     }
@@ -43,6 +50,7 @@ export default function Header() {
 
           {/* Hamburger button (mobile only) */}
           <button
+            ref={buttonRef}
             className={`hamburger-btn ${menuOpen ? 'open' : ''}`}
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Menu"

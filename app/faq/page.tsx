@@ -4,8 +4,11 @@ import Footer from '@/components/Footer'
 import FaqItem from '@/components/FaqItem'
 
 export const metadata: Metadata = {
-  title: 'Tanya Jawab (FAQ) - POS Kedai',
-  description: 'Pertanyaan yang sering diajukan seputar aplikasi kasir POS Kedai.',
+  title: 'Tanya Jawab (FAQ) - POS Kedai | Solusi Kasir Digital UMKM',
+  description: 'Pertanyaan yang sering diajukan seputar aplikasi kasir POS Kedai — fitur offline, stok otomatis, laporan laba, paket Free & Pro, dan printer thermal.',
+  alternates: {
+    canonical: 'https://poskedai.com/faq',
+  },
 }
 
 export default function FaqPage() {
@@ -255,6 +258,74 @@ export default function FaqPage() {
             <p>Ya. Di aplikasi tersedia <strong>panduan interaktif</strong> untuk pemula. Kami juga menyediakan video tutorial di channel YouTube POS Kedai dan artikel bantuan di website.</p>
           </FaqItem>
         </div>
+      </div>
+    </div>
+  </section>
+
+  {/*  Penutup: Definition Block + Comparison Table (AI Extractable)  */}
+  <section className="definition-section" aria-label="Tentang POS Kedai">
+    <div className="faq-container">
+      <p className="definition-text">
+        <strong>POS Kedai</strong> adalah aplikasi kasir (Point of Sales) berbasis Android yang dirancang khusus untuk UMKM — toko sembako, warung kelontong, kedai, dan minimarket di Indonesia. Aplikasi ini bekerja tanpa internet (offline-first), menghitung laba bersih secara otomatis, memberi notifikasi stok menipis, serta mendukung multi kasir dengan rekap shift harian dalam format PDF.
+      </p>
+    </div>
+  </section>
+
+  <section id="perbandingan" className="comparison-section" aria-label="Perbandingan POS Kedai vs Kasir Manual">
+    <div className="faq-container">
+      <div className="faq-header">
+        <span className="badge-pill">POS Kedai vs Manual</span>
+        <h2>Mengapa Beralih dari Kasir Manual?</h2>
+        <p>Bandingkan sendiri efisiensi toko Anda dengan dan tanpa aplikasi kasir digital.</p>
+      </div>
+
+      <div className="comparison-table-wrapper">
+        <table className="comparison-table">
+          <thead>
+            <tr>
+              <th>Aspek</th>
+              <th>Kasir Manual / Buku Nota</th>
+              <th className="highlight-col">POS Kedai</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Kecepatan transaksi</td>
+              <td>Hitung pakai kalkulator, risiko salah kembalian</td>
+              <td className="highlight-col">Otomatis hitung total & kembalian dalam 3 detik</td>
+            </tr>
+            <tr>
+              <td>Pencatatan stok</td>
+              <td>Stok opname manual mingguan, sering telat</td>
+              <td className="highlight-col">Stok berkurang otomatis saat transaksi + notifikasi stok menipis</td>
+            </tr>
+            <tr>
+              <td>Laporan laba</td>
+              <td>Rekap nota & Excel manual, 2+ jam per hari</td>
+              <td className="highlight-col">Laba bersih harian/mingguan/bulanan otomatis, real-time</td>
+            </tr>
+            <tr>
+              <td>Multi kasir & shift</td>
+              <td>Sulit pantau karyawan, sering selisih kas</td>
+              <td className="highlight-col">Akun kasir berjenjang + rekap shift harian PDF</td>
+            </tr>
+            <tr>
+              <td>Mode offline</td>
+              <td>Buku tetap dipakai walau listrik mati</td>
+              <td className="highlight-col">Tetap transaksi tanpa internet, sinkron otomatis saat online</td>
+            </tr>
+            <tr>
+              <td>Backup data</td>
+              <td>Buku hilang / basah = data hilang</td>
+              <td className="highlight-col">Cloud backup otomatis, ganti HP tanpa kehilangan data</td>
+            </tr>
+            <tr>
+              <td>Biaya</td>
+              <td>Gratis, tapi waktu terbuang banyak</td>
+              <td className="highlight-col">Paket Free gratis selamanya, Pro mulai Rp 19.000/bulan</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>

@@ -71,6 +71,7 @@ Tidak. Paket Free dapat digunakan gratis selamanya untuk kebutuhan dasar kasir U
 ## Dokumentasi & Tautan Penting
 
 - [Halaman Utama](https://poskedai.com/)
+- [Detail Paket & Harga (Pricing)](https://poskedai.com/pricing.md)
 - [Tanya Jawab Lengkap (FAQ)](https://poskedai.com/faq)
 - [Tentang Kami](https://poskedai.com/about)
 - [Syarat & Ketentuan](https://poskedai.com/terms)

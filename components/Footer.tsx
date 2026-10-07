@@ -32,9 +32,9 @@ export default function Footer() {
         <div className="footer-bottom">
           <p className="copyright">© 2026 POS Kedai. Hak cipta dilindungi undang-undang.</p>
           <div className="social-links">
-            <a href="#" className="social-item">Instagram</a>
-            <a href="#" className="social-item">Facebook</a>
-            <a href="#" className="social-item">YouTube</a>
+            <a href="https://instagram.com/pos.kedai" target="_blank" rel="noopener noreferrer" className="social-item">Instagram</a>
+            <a href="https://www.facebook.com/share/1EDunkTSEv/" target="_blank" rel="noopener noreferrer" className="social-item">Facebook</a>
+            <a href="/#" className="social-item">YouTube</a>
           </div>
         </div>
       </div>
